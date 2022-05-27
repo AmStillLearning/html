@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function validation(){
+			var name2 = document.getElementById("name1").value;
+			var uName = document.getElementById("username").value;
+			var pwd = document.getElementById("password1").value;
+
+
+			if(name2==""){
+				//document.write("Done");
+				window.alert("Name must not be empty");
+				return false;
+			}
+			
+			if(uName==""){
+				//document.write("Done");
+				window.alert("Username must not be empty");
+				return false;
+			}
+
+			if(pwd.length<8){
+				//document.write("Done");
+				window.alert("8 Characters required for name");
+				return false;
+			}
+
+	}
+		
+	</script>
+	
+</head>
+<body>
+	<form onsubmit="">
+		<label for="name" id="name">Name</label>
+		<input type="text" id="name1" required><br>
+		<label for="username">UserName</label>
+		<input type="text" id="username" required=""><br>
+		<label for="password">Password</label>
+		<input type="password" id ="password1" required="">
+		<input type="button" value="Submit" onclick="validation()">
+		
+	</form>
+	<p id="demo"></p>
+</body>
+</html>
+
+
+
+
